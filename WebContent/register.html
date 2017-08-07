@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>				
+		<script type="text/javascript" src="jedate.js">	</script>				
+	    <link type="text/css" rel="stylesheet" href="css/register.css"/>
+	    <script type="text/javascript">
+			$(function(){
+				$("#username").blur(function(){
+
+					var nameInput = $(this).val();
+				 	 $.get("/fenye/userPanduan",    //请求地址
+							{"username":nameInput},  //请求传递的参数，也可以是JSON
+							function(data){     //data表示传递回来的数据，只有在成功的时候才有
+								/* alert(data); */
+								 if(data==0){
+									alert("用户可用");
+									}else {
+										alert("用户已存在");
+										} 
+										},
+							"text"         //表示返回内容的格式,json会将传回来的自动解析成json对象
+					      ); 
+					}); 
+				}); 
+	    </script>
+	</head>
+	<body>
+		<!--先用一个大的div把网页页面圈起来，网页居中，内容居左-->
+	<div id="container">
+              
+      <form action="" method="post">
+      	  <br/><br/><br/> 请填写注册信息。（带<span>*</span>的为必填）<br/><br/><br/>
+                       用 户 名：	<input type="text" name="username" value="" id="username"/><span>* 请输入3-8位合法字母</span><br/><br/>
+                       密 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 	码: <input type="text" value=""/><span> * 请输入3-8位合法字母</span><br/><br/>
+                       邮&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 箱：<input type="text" value=""/><span> * </span><br/><br/>
+                       生&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 日：	<input class="datainp" id="datebut" type="text" placeholder="请选择" onClick="jeDate({dateCell:'#datebut',isTime:false,format:'YYYY-MM-DD'})" readonly>
+              <br/>  <br/>   匿&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 名: <input type="text" value=""/><br/><br/><br />
+              <input type="submit" id="" value="提交" />
+              <!--添加一个返回按钮-->
+              <input type="button" name="" id="" value="返回"  onclick="window.location='日期控件.html'"/>
+      </form>   
+      
+    
+    
+              
+
+	</div>								
+	</body>
+</html>

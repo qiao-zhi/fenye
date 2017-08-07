@@ -1,0 +1,48 @@
+﻿			body{
+				margin: 0px auto;
+				padding: 0px;
+				font-size: 12px;  /****����һ����9,14����12**/
+				color: #364f56;  /****������ɫ**/
+				background-color: #FFFFFF;   /**����ɫ*****/
+				text-align: center;
+                                background-image: url(/fenye/img/login.jpg);
+				background-size:cover;
+							}
+			#container{
+				
+				margin: 0px auto;
+				text-align: left;
+	       			width: 1024px;   /*****   1024-1440�������еĵ��Կ��;***/
+                                height:600px;
+				
+			}
+			#loginForm{
+				width: 300px;
+				height: 270px;
+				margin: 100px 150px 150px auto;
+				background-color: #0266BE;
+			}
+          span{
+          	margin-left: 20px;
+          	font-size: 20px;
+          	color: black;
+          }
+           .btn{
+           	margin-left: 40px;
+           	background-color:deepskyblue ;
+           	width: 80px;
+           	margin-left: 20px;
+           }
+           #footer{
+           	font-size: 14px;
+           	color: red;
+           }
+           #checkcode{
+           	width: 60px;
+           	margin-left: 0px;
+           
+           }
+			#auto{
+			color:red;
+			font-size:17px;
+			margin:20px 20px}

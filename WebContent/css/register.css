@@ -1,0 +1,20 @@
+			body{
+				margin: 0px ;
+				padding: 0px;
+				font-size: 12px;  /****����һ����9,14����12**/
+				color: #364f56;  /****������ɫ**/
+				background-color: #FFFFFF;   /**����ɫ*****/
+				text-align: center;
+				
+							}
+			#container{
+				margin: 0px auto;
+				border: 1px solid green;
+				text-align: left;/****������ҳ�е����ݾ���**/
+				width: 1024px;   /*****   1024-1440�������еĵ��Կ��;***/
+				height: 600px;
+				border:  1px dashed green;
+			}
+			span{
+				color: red;
+			}
